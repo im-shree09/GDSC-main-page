@@ -5,7 +5,7 @@ export const Header = () => {
     return (
        <header className="showcase">
        <div className="showcase-top">
-          <img src="https://i.ibb.co/r5krrdz/logo.png" alt="logo"></img>
+          <img src="./couchPotatoLogo.png" alt="logo"></img>
           <Link to="/" className="btn btn-rounded btn-header">
               Sign In
           </Link>
