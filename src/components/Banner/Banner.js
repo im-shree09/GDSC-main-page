@@ -4,7 +4,7 @@ import api from '../../api/api';
 import axios from 'axios';
 
 const Banner = () => { 
-    const[movies, setMovies] = useState([]);
+    const[movies, setMovies] = useState(['']);
     useEffect(()=>{
         const fetchData = async()=>{
         const response = await axios.get(
@@ -27,19 +27,19 @@ const Banner = () => {
         <header className="banner"
         style={{
             backgroundSize: "cover",
-            backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
+            backgroundImage: `url("https://image.tmdb.org/t/p/original/${movies?.backdrop_path}")`,
             backgroundPosition: "center center",
         }}
         >
             <div className="banner-contents">
                 <h1 className="banner-title">
-                    {movie?.title || movie?.name || movie?.originam_name}
+                    {movies?.title || movies?.name || movies?.originam_name}
                 </h1>
                 <div className="banner-buttons">
                     <div className="banner-buttons">Play</div>
                     <div className="banner-buttons">My List</div>
                 </div>
-                <h1 className="banner-descriptions">{truncate(movie?.overview,150)}</h1>    
+                <h1 className="banner-descriptions">{truncate(movies?.overview,150)}</h1>    
             </div>
             <div className="banner-fadeBottom"></div>    
         </header>
