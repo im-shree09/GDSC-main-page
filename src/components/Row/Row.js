@@ -5,7 +5,7 @@ const base_url="https://image.tmbd.org/t/p/original";
 
 const Row = ({title,fetchUrl,isLargeRow}) => {
     const[movies, setMovies] = useState([]);
-    console.log("process.env.REACT_APP_API",process.env,REACT_APP_API); 
+    // console.log("process.env.REACT_APP_API",process.env,REACT_APP_API); 
     useEffect(()=>{
         const fetchData = async ()=>{
             const response = await axios.get(`${process.env.REACT_APP_API}${fetchUrl}`)
