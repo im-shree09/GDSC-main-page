@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, {useEffect, useState} from 'react'
 import "./Row.css"
-const base_url="https://image.tmbd.org/t/p/original";
+const base_url="https://couch-penguin.herokuapp.com";
 
 
 const Row = ({title,fetchUrl,isLargeRow}) => {
@@ -11,30 +11,31 @@ const Row = ({title,fetchUrl,isLargeRow}) => {
         const fetchData = async ()=>{
             const response = await axios.get(`${process.env.REACT_APP_API}${fetchUrl}`)
             setMovies(response.data.results);
-            return response;
+            return (response);
         };
         fetchData();
     },[]);
 
     // console.log("movies",movies);
     const handleClick = ()=>{
-        return (
-            <div className="row">
-                <h2>{title}</h2>
-                <div className="row-posters">
-                    {movies && movies.map((movie)=>(
-                        <img
-                        onClick={()=> handleClick(movie)}
-                        key={movie.id}
-                        className={`row-poster ${isLargeRow && "row-posterLarge"}`}
-                        src={`${base_url}${isLargeRow ? movie.poter_path : movie.backdrop_path}`}
-                        alt={movie.name}
-                        />
-                    ))}
-                </div>
-            </div>
-        )
-    }
+        
+      };
+      return (
+        <div className="row">
+          <h2>{title}</h2>
+          <div className="row-posters">
+             {movies && movies.map((movie)=>(
+                 <img
+                 onClick={()=> handleClick(movie)}
+                 key={movie.id}
+                 className={`row-poster ${isLargeRow && "row-posterLarge"}`}
+                 src={`${base_url}${isLargeRow ? movie.poter_path : movie.backdrop_path}`}
+                 alt={movie.name}
+                 />
+             ))}
+           </div>
+        </div>
+ );
     
 }
 

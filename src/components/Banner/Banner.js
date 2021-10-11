@@ -8,7 +8,7 @@ const Banner = () => {
     useEffect(()=>{
         const fetchData = async()=>{
         const response = await axios.get(
-            `${process.env.REACT_APP_API}${api.fetchNetflixOriginals}`
+            `${process.env.REACT_APP_API}${api.fetchShows}`
         );
         setMovies(
             response.data.results[
@@ -36,10 +36,10 @@ const Banner = () => {
                     {movies?.title || movies?.name || movies?.originam_name}
                 </h1>
                 <div className="banner-buttons">
-                    <div className="banner-buttons">Play</div>
-                    <div className="banner-buttons">My List</div>
+                    <button className="banner-button">Play</button>
+                    <button className="banner-button">My List</button>
                 </div>
-                <h1 className="banner-descriptions">{truncate(movies?.overview,150)}</h1>    
+                <h1 className="banner-description">{truncate(movies?.overview,150)}</h1>    
             </div>
             <div className="banner-fadeBottom"></div>    
         </header>
