@@ -4,6 +4,7 @@ import Home from './pages/home';
 import './App.css';
 import NetflixShow from './pages/NetflixShow';
 import ScrollToTop from './components/scrollToTop/scrollToTop';
+import SignUp from './pages/SignUp';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
     <ScrollToTop/>
     <switch>
     <Route exact path="/"  component={Home} />
+    <Route exact path = "/sign-up"  component={SignUp}/>
     <Route exact path="/netflix-show"  component={NetflixShow} />
     </switch>
     </div>

@@ -6,7 +6,7 @@ export const Header = () => {
        <header className="showcase">
        <div className="showcase-top">
           <img src="../images/couchPotatoLogo.png" alt="logo"></img>
-          <Link to="/" className=" btn-rounded btn-header">
+          <Link to="/sign-up" className=" btn-rounded btn-header">
               Sign In
           </Link>
        </div>
