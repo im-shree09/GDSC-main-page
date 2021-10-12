@@ -20,7 +20,7 @@ const SignUp=()=>{
              <Nav/>
         <div className="App">
             <div className="login">
-            <div className="container">
+            <div className="container1">
             {isActive ? (<Login></Login>) : (<Register/>)}
             </div>
             <RightSide
