@@ -23,7 +23,7 @@ const Nav = () => {
     return (
         <div className={`nav $(show && "nav-black")`}>
             <Link to="/">
-                <h2 className="nav-logo">CouchPotato</h2>
+                <h2 className="nav-logo written">CouchPotato</h2>
             </Link>
             <img src={NetflixAvatar} className="nav-avatar" alt="logo"></img>
         </div>

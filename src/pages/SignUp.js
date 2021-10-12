@@ -16,7 +16,7 @@ const SignUp=()=>{
   const current = isActive ? "Register" : "Login";
   const currentActive = isActive ? "login" : "register";
     return(
-        <div>
+        <div >
              <Nav/>
         <div className="App">
             <div className="login">
