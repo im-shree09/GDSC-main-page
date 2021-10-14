@@ -2,6 +2,9 @@ import React from 'react'
 import {TabLabels} from './constant'
 import {Link} from 'react-router-dom'
 import './tabs.css'
+import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faInfo } from '@fortawesome/free-solid-svg-icons';
+
 
 const Tabs = ({activeTabName,onClickTab}) => {
     const {TEAM_INFO,ABOUT_OUR_PROJECT,OUR_APP}=TabLabels;
@@ -22,7 +25,7 @@ const Tabs = ({activeTabName,onClickTab}) => {
                 "fas,fa-door-open fa-3x",
                 "tab-1")}
                 {renderTabTitle(ABOUT_OUR_PROJECT,activeTabName===ABOUT_OUR_PROJECT,
-                "fas,fa-door-open fa-3x",
+                 " fas,fa-info,fa-3x ",
                 "tab-1")}
                 {renderTabTitle(OUR_APP,activeTabName===OUR_APP,
                 "fas,fa-tablet-alt fa-3x",
@@ -38,11 +41,7 @@ const Tabs = ({activeTabName,onClickTab}) => {
                        <p className="text-lg">
                            This is our Hardworking team for this project
                        </p>
-                       <ul>
-                           <li>Devang : Backend Mentor</li>
-                           <li>swarangi : App Dev Mentor</li>
-                           <li>Vaishnavi : Frontend Mentor</li>
-                       </ul>
+                      
                        </div>
                        </div>
                       </div>

@@ -1,5 +1,7 @@
-const API_KEY="6f1c35eee75a0a84cb3b659ebebf4657";
+
+
 const api={
     // fetchTrending
+    fetchShows : `https://couch-penguin.herokuapp.com/shows`
 };
 export default api;
