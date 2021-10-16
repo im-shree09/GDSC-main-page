@@ -177,3 +177,7 @@ img {
     margin-top: 3rem;
   }
 }
+.written{
+  font-style: italic;
+  font-size: 2rem;
+}

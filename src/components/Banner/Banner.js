@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import "./Banner.css";
 import api from '../../api/api';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const Banner = () => { 
     const[movies, setMovies] = useState(['']);
@@ -36,8 +37,10 @@ const Banner = () => {
                     {movies?.title || movies?.name || movies?.originam_name}
                 </h1>
                 <div className="banner-buttons">
-                    <button className="banner-button">Play</button>
-                    <button className="banner-button">My List</button>
+                <Link to="/main-page">
+                    <button className="banner-button">View</button>
+                    </Link>
+                    {/* <button className="banner-button">My List</button> */}
                 </div>
                 <h1 className="banner-description">{truncate(movies?.overview,150)}</h1>    
             </div>

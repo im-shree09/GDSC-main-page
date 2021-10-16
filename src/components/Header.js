@@ -1,11 +1,15 @@
 import React from 'react'
 import './Header.css'
 import { Link} from "react-router-dom"
+import Text from '../images/Component.png'
 export const Header = () => {
     return (
        <header className="showcase">
        <div className="showcase-top">
-          <img src="../images/couchPotatoLogo.png" alt="logo"></img>
+          <img src={Text} alt="logo"></img>
+          {/* <Link to="/">
+                <h2 className="nav-logo written">CouchPotato</h2>
+            </Link> */}
           <Link to="/sign-up" className=" btn-rounded btn-header">
               Sign In
           </Link>

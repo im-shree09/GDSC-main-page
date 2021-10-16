@@ -9,9 +9,14 @@ export const NetflixShow = () => {
             <Nav/>
             <Banner /> 
             <Row 
-            title="Shows"
-            fetchUrl={api.fetchShows}
+            title="Movies"
+            fetchUrl={api.fetchMovies}
             isLargeRow  
+            />  
+             <Row 
+            title="Latest Movies"
+            fetchUrl={api.fetchLatestMovies}
+             
             />  
         </div>
     );
